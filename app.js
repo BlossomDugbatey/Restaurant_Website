@@ -20,11 +20,15 @@ app.set("layout","./layouts/main")
 app.set("view engine", "ejs")
 
 //route for home(app/home)
-const homeRoute = require("./server/routes/pageRoutes")
-app.use('/', homeRoute)
+const pageRoute = require("./server/routes/pageRoutes")
+app.use('/', pageRoute)
+
+//routes for menu
+const menuRoute = require("./server/routes/menuRoutes")
+app.use('/menu', menuRoute)
 
 //port 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 9090
 app.listen(PORT, () => {
     console.log(`server connected to port: ${PORT}`)
 })
