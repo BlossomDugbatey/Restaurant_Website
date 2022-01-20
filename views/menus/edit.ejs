@@ -1,0 +1,18 @@
+<h3>EDIT MENU</h3>
+<form class="addMenu" id="form-input" action='' method="post">
+    <label class="text">Menu Item :
+        <input type="hidden"  id="_id" name="_id"placeholder="status" required>
+        <input type="text" id="name" value="<%- menu.name %> " name="name" placeholder="name" required>
+    </label>
+    <label class="text">Price :
+        <input type="text" id="price" value="<%- menu.price %> " name="price" placeholder="price" required>
+    </label>
+    <label class="text_1">Status :
+        <input type="text" id="status" value="<%- menu.status %> " name="status" placeholder="status" required>
+    </label>
+    <label class="text_1">Remarks :
+        <textarea type="text" id="remarks" value="" name="remarks" placeholder="status"
+            required> <%- menu.remarks %> </textarea>
+    </label>
+    <button class="add_btn" type="submit" value="Submit">Add Menu</button>
+</form>

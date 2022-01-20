@@ -1,0 +1,27 @@
+<div>
+    <a href="/menus/delete">Delete Menu</a><br>
+    <a href="/menus/add">Add Menu</a>
+</div>
+<div id="menu_item"> 
+    <!-- iterating through menu and displaying -->
+    <div class="menuItemList">
+        <% if (typeof menus != 'undefined'){%>
+            <% menus.forEach((menu) => { %> 
+                <div class="commentCardList">
+                    <h3>Food : <%- menu.name -%></h3>
+                    <p>Price(Ghc) : <%- menu.price -%></p>
+                    <p>Status : <%- menu.status -%></p>
+                    <p>Remark : <%- menu.remarks -%></p>
+                    <!-- editing the menu using ejs -->
+                    <div class="icons">
+                        <a href="/menus/edit/<%- menu._id -%>"><i class="fas fa-edit"></i></a>
+                        <a href="/menus/delete/<%- menu._id -%>"><i class="fas fa-trash"></i></a>
+                        <a href="/orders/add/<%- menu._id -%>"><i class="fas fa-cart-plus"></i> </a>
+                    </div>
+                    <hr>
+                </div>
+   
+            <% }) %> 
+        <% } %>
+    </div>
+</div>

@@ -23,12 +23,12 @@ app.set("view engine", "ejs")
 const pageRoute = require("./server/routes/pageRoutes")
 app.use('/', pageRoute)
 
-//routes for menu
+//route for menu
 const menuRoute = require("./server/routes/menuRoutes")
-app.use('/menu', menuRoute)
+app.use('/menus', menuRoute)
 
 //port 
-const PORT = process.env.PORT || 9090
+const PORT = process.env.PORT || 7000
 app.listen(PORT, () => {
     console.log(`server connected to port: ${PORT}`)
 })
